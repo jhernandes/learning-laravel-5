@@ -8,9 +8,15 @@
 <body>
     <br/>
    <div class="container">
+       @include('flash::message')
+
        @yield('content')
    </div>
 
+    @include('partials.flashjs')
+    <script>
+        $('#flash-overlay-modal').modal();
+    </script>
     @yield('footer')
 </body>
 </html>
