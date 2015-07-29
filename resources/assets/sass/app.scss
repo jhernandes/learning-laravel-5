@@ -1,0 +1,18 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+body {
+  padding-top: 60px;
+}
+
+body, label, .checkbox label {
+  font-weight: 300;
+}
+
+
+a.btn-primary {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
+  transform: translateY(50%);
+}
