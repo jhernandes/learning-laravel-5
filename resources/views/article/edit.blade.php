@@ -1,14 +1,16 @@
 @extends('app');
 
 @section('content')
-    <h1>Edit: {{ $article->title }}</h1>
-    <hr/>
+    <div class="col-lg-offset-3 col-lg-6">
+        <h1>Editing: {{ $article->title }}</h1>
+        <hr/>
 
-    {!! Form::model($article, ['method' => 'PATCH', 'action' => ['ArticleController@update', $article->id]]) !!}
+        {!! Form::model($article, ['method' => 'PATCH', 'action' => ['ArticleController@update', $article->id]]) !!}
 
-        @include('article.partials.form', ['submitButtonText' => 'Update Article'])
+            @include('article.partials.form', ['submitButtonText' => 'Update Article'])
 
-    {!! Form::close() !!}
+        {!! Form::close() !!}
+    <div>
 
     @include('errors.error')
 @stop
